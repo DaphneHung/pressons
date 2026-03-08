@@ -1,0 +1,397 @@
+/* ============================================ */
+/* BASIC SETUP - This applies to the whole page */
+/* ============================================ */
+
+/* The * selects EVERYTHING on the page */
+* {
+    margin: 0;           /* Removes default spacing outside elements */
+    padding: 0;          /* Removes default spacing inside elements */
+    box-sizing: border-box;  /* Makes sizing easier to calculate */
+}
+
+/* Styles for the entire page body */
+body {
+    font-family: 'Arial', sans-serif;  /* The font used for all text */
+    background: linear-gradient(135deg, #f0dfe9 0%, #eea4d1 100%);  /* Pink gradient background */
+    color: #333;         /* Dark gray text color */
+    line-height: 1.6;    /* Space between lines of text */
+}
+/* ============================================ */
+/* HEADER SECTION - Top of the page */
+/* ============================================ */
+
+header {
+    background: linear-gradient(135deg, #ff6ec4 0%, #ff9de6 100%);  /* Pink gradient */
+    padding: 20px;       /* Space inside the header */
+    text-align: center;  /* Centers the text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Adds a subtle shadow */
+}
+
+/* The main title "Daphne's Press On Nails" */
+header h1 {
+    color: white;        /* White text */
+    font-size: 36px;     /* Large text size */
+    margin-bottom: 15px; /* Space below the title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);  /* Adds a shadow to text */
+}
+
+/* Navigation menu container */
+nav ul {
+    list-style: none;    /* Removes bullet points */
+    display: flex;       /* Makes items line up horizontally */
+    justify-content: center;  /* Centers the menu items */
+    gap: 10px;          /* Space between menu items */
+    flex-wrap: wrap;    /* Wraps to next line on small screens */
+}
+
+/* Each menu button link */
+nav ul li a {
+    color: white;            /* White text */
+    text-decoration: none;   /* Removes underline */
+    padding: 10px 20px;      /* Space inside the button */
+    background: rgba(255, 255, 255, 0.2);  /* Semi-transparent white */
+    border-radius: 20px;     /* Rounded corners */
+    font-size: 16px;         /* Text size */
+    transition: all 0.3s ease;  /* Smooth animation when hovering */
+}
+
+/* What happens when you hover over a menu button */
+nav ul li a:hover {
+    background: white;       /* Changes to solid white */
+    color: #ff6ec4;         /* Changes text to pink */
+}
+
+/* ============================================ */
+/* MAIN CONTENT AREA */
+/* ============================================ */
+
+main {
+    max-width: 1200px;   /* Maximum width of content */
+    margin: 0 auto;      /* Centers the content */
+    padding: 20px;       /* Space around the content */
+}
+
+/* Each section (About, Designs, Pricing, etc.) */
+section {
+    background: white;       /* White background */
+    margin: 30px 0;         /* Space above and below */
+    padding: 30px;          /* Space inside the section */
+    border-radius: 15px;    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Shadow effect */
+}
+
+/* Section titles (About Us, My Designs, etc.) */
+h2 {
+    color: #ff6ec4;         /* Pink color */
+    font-size: 28px;        /* Large text */
+    margin-bottom: 20px;    /* Space below the title */
+    text-align: center;     /* Centers the text */
+    border-bottom: 3px solid #ff6ec4;  /* Pink line under the title */
+    padding-bottom: 10px;   /* Space between text and line */
+}
+
+/* ============================================ */
+/* ABOUT US SECTION */
+/* ============================================ */
+
+#about p {
+    font-size: 18px;        /* Slightly larger text */
+    text-align: center;     /* Centers the text */
+    color: #666;           /* Gray color */
+    max-width: 800px;      /* Maximum width */
+    margin: 0 auto;        /* Centers the paragraph */
+}
+
+/* ============================================ */
+/* MY DESIGNS SECTION */
+/* ============================================ */
+
+/* Container that holds all design cards */
+.designs-container {
+    display: grid;          /* Uses grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* Responsive columns */
+    gap: 25px;             /* Space between cards */
+    margin-top: 20px;      /* Space above the container */
+}
+
+/* Each individual design card */
+.design-card {
+    background: linear-gradient(135deg, #f8abd4 0%, #ffddfa 100%);  /* Light pink gradient */
+    border-radius: 15px;    /* Rounded corners */
+    padding: 20px;          /* Space inside the card */
+    text-align: center;     /* Centers the content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth animation */
+    border: 2px solid #ffcceb;  /* Pink border */
+}
+
+/* What happens when you hover over a design card */
+.design-card:hover {
+    transform: translateY(-5px);  /* Lifts the card up */
+    box-shadow: 0 8px 16px rgba(255, 110, 196, 0.3);  /* Adds a bigger shadow */
+}
+
+/* The nail design image */
+.design-card img {
+    width: 100%;           /* Full width of the card */
+    height: 200px;         /* Fixed height */
+    object-fit: cover;     /* Crops image to fit nicely */
+    border-radius: 10px;   /* Rounded corners */
+    margin-bottom: 15px;   /* Space below the image */
+    border: 3px solid #ff9de6;  /* Pink border around image */
+}
+
+/* Design name (Pink Glitter, etc.) */
+.design-card h3 {
+    color: #ff6ec4;        /* Pink color */
+    font-size: 20px;       /* Medium text size */
+    margin-bottom: 10px;   /* Space below */
+}
+
+/* Design description text */
+.design-card p {
+    color: #666;           /* Gray color */
+    font-size: 14px;       /* Smaller text */
+}
+
+/*/* ============================================ */
+/* PRICING SECTION - Timeline */
+/* ============================================ */
+
+/* New timeline container */
+.pricing-timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 30px;
+    align-items: start;
+}
+
+/* Horizontal track line */
+.pricing-timeline .timeline-track {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 6px;
+    background: linear-gradient(90deg, #ffcceb 0%, #ff6ec4 50%, #ffcceb 100%);
+    border-radius: 999px;
+    box-shadow: 0 2px 6px rgba(255, 110, 196, 0.25);
+}
+
+/* Each step */
+.timeline-step {
+    text-align: center;
+    position: relative;
+}
+
+.timeline-step .step-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 3px solid #ff9de6;
+    box-shadow: 0 8px 16px rgba(255, 110, 196, 0.25);
+    margin-bottom: 18px;
+}
+
+.timeline-step .step-price {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6ec4 0%, #ff9de6 100%);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 22px;
+    box-shadow: 0 6px 14px rgba(255, 110, 196, 0.35);
+}
+
+/* Optional small caption below price */
+.timeline-step .step-caption {
+    margin-top: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Mobile layout: stack and turn track vertical */
+@media (max-width: 768px) {
+    .pricing-timeline {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .pricing-timeline .timeline-track {
+        top: auto;
+        left: 50%;
+        width: 6px;
+        height: 100%;
+        transform: translateX(-50%);
+        background: linear-gradient(180deg, #ffcceb 0%, #ff6ec4 50%, #ffcceb 100%);
+    }
+} /* <--- !!! THIS WAS THE MISSING BRACKET !!! */
+
+/* ============================================ */
+/* HOW TO ORDER SECTION */
+/* ============================================ */
+
+/* Container for step cards */
+.steps-container {
+    display: grid;         /* Uses grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* Responsive columns */
+    gap: 20px;            /* Space between cards */
+    margin-top: 20px;     /* Space above */
+}
+
+/* Each step card */
+.step-card {
+    background: linear-gradient(135deg, #fff0f8 0%, #ffe6f5 100%);  /* Light pink gradient */
+    padding: 25px;         /* Space inside */
+    border-radius: 15px;   /* Rounded corners */
+    text-align: center;    /* Centers content */
+    border: 2px solid #ffcceb;  /* Pink border */
+    transition: transform 0.3s ease;  /* Smooth animation */
+}
+
+/* What happens when you hover over a step card */
+.step-card:hover {
+    transform: translateY(-3px);  /* Lifts the card up */
+}
+
+/* The step number (1, 2, 3, 4) */
+.step-number {
+    background: #ff6ec4;   /* Pink background */
+    color: white;          /* White text */
+    width: 50px;          /* Circle width */
+    height: 50px;         /* Circle height */
+    border-radius: 50%;   /* Makes it a circle */
+    display: flex;        /* Centers the number */
+    align-items: center;  /* Centers vertically */
+    justify-content: center;  /* Centers horizontally */
+    font-size: 24px;      /* Large number */
+    font-weight: bold;    /* Bold text */
+    margin: 0 auto 15px;  /* Centers and adds space below */
+}
+
+/* Step title */
+.step-card h3 {
+    color: #ff6ec4;       /* Pink color */
+    font-size: 18px;      /* Medium text */
+    margin-bottom: 10px;  /* Space below */
+}
+
+/* Step description */
+.step-card p {
+    color: #666;          /* Gray color */
+    font-size: 14px;      /* Smaller text */
+}
+
+/* ============================================ */
+/* SAMPLE MESSAGE SECTION */
+/* ============================================ */
+
+/* Container for the sample message image */
+.sample-container {
+    text-align: center;     /* Centers the image */
+    margin-top: 20px;       /* Space above */
+}
+
+/* The sample message image */
+.sample-container img {
+    max-width: 100%;        /* Makes image responsive */
+    height: auto;           /* Maintains aspect ratio */
+    border-radius: 10px;   /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Adds a subtle shadow */
+    border: 2px solid #ffcceb;  /* Pink border */
+}
+
+/* ============================================ */
+/* REVIEWS SECTION */
+/* ============================================ */
+
+/* Container for reviews */
+.reviews-container {
+    display: grid;        /* Uses grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* Responsive columns */
+    gap: 20px;           /* Space between cards */
+    margin-top: 20px;    /* Space above */
+}
+
+/* Each review card */
+.review-card {
+    background: linear-gradient(135deg, #fff0f8 0%, #ffe6f5 100%);  /* Light pink gradient */
+    padding: 20px;        /* Space inside */
+    border-radius: 15px;  /* Rounded corners */
+    border: 2px solid #ffcceb;  /* Pink border */
+    transition: transform 0.3s ease;  /* Smooth animation */
+}
+
+/* What happens when you hover over a review */
+.review-card:hover {
+    transform: translateY(-3px);  /* Lifts the card up */
+}
+
+/* Star rating */
+.stars {
+    font-size: 20px;      /* Size of stars */
+    margin-bottom: 10px;  /* Space below */
+    color: #ffd700;       /* Gold color */
+}
+
+/* Review text */
+.review-text {
+    color: #333;          /* Dark gray */
+    font-style: italic;   /* Makes text italic */
+    margin-bottom: 10px;  /* Space below */
+    font-size: 14px;      /* Text size */
+}
+
+/* Reviewer name */
+.reviewer-name {
+    color: #ff6ec4;       /* Pink color */
+    font-weight: bold;    /* Bold text */
+    text-align: right;    /* Aligns to the right */
+    font-size: 14px;      /* Text size */
+}
+
+/* ============================================ */
+/* FOOTER SECTION */
+/* ============================================ */
+
+footer {
+    background: linear-gradient(135deg, #ff6ec4 0%, #ff9de6 100%);  /* Pink gradient */
+    color: white;         /* White text */
+    text-align: center;   /* Centers text */
+    padding: 20px;        /* Space inside */
+    margin-top: 40px;     /* Space above */
+}
+
+/* Footer text */
+footer p {
+    margin: 5px 0;        /* Small space between lines */
+}
+
+/* ============================================ */
+/* RESPONSIVE DESIGN - Makes it look good on phones */
+/* ============================================ */
+
+/* These rules apply only to screens smaller than 768px (tablets and phones) */
+@media (max-width: 768px) {
+    /* Makes the main title smaller on phones */
+    header h1 {
+        font-size: 28px;
+    }
+    
+    /* Makes menu buttons smaller */
+    nav ul li a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    
+    /* Makes section titles smaller */
+    h2 {
+        font-size: 24px;
+    }
+    
+    /* Reduces padding on sections for more space */
+    section {
+        padding: 20px;
+    }
